@@ -1,0 +1,91 @@
+body {
+    color: #414141;
+    background-color: #EEEEEE;
+}
+
+p {
+    margin-left: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2.about {
+    color: blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-top: 1px solid rgb(48, 65, 212)
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(199, 196, 196, 0.884);
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 1px solid rgb(48, 65, 212)
+}
+
+ul {
+    list-style-type: circle;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+#creatures {
+    background-color: rgb(160, 247, 196);
+    padding-top: 5px;
+    padding-right: 5px;
+    color: rgb(18, 15, 185);
+    list-style-type: lower-roman;
+}
+
+em {
+    background-color: yellow;
+    display: inline;
+}
+
+ul.menu {
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    background-color: rgb(4, 87, 17);
+}
+
+.menu-item {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+.menu-item:last-child {
+    border-right: none;
+}
+
+.menu-item.active {
+    background-color: #4CAF50;
+}
+
+a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px, 16px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+a:link {
+color: white;
+text-decoration: none;
+}
+a:visited {
+color: white;
+}
+a:hover {
+color: aqua;
+text-decoration: underline;
+}
+a:active {
+color: red;
+}
