@@ -3,15 +3,15 @@ body {
     background-color: #EEEEEE;
 }
 
-p {
-    margin-left: 30px;
-    font-family: 'Times New Roman', Times, serif;
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-h2.about {
-    color: blue;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-top: 1px solid rgb(48, 65, 212)
+p {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 h2 {
@@ -19,9 +19,12 @@ h2 {
     margin-bottom: 30px;
     padding: 20px;
     text-align: center;
-    background-color: rgba(199, 196, 196, 0.884);
+    /*background-color: rgba(199, 196, 196, 0.884);*/
     font-family: 'Times New Roman', Times, serif;
-    border-bottom: 1px solid rgb(48, 65, 212)
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    align-items: center;
 }
 
 ul {
@@ -32,60 +35,82 @@ ol {
     list-style-type: upper-roman;
 }
 
-#creatures {
-    background-color: rgb(160, 247, 196);
-    padding-top: 5px;
-    padding-right: 5px;
-    color: rgb(18, 15, 185);
-    list-style-type: lower-roman;
-}
-
 em {
-    background-color: yellow;
+    background-color: blue;
     display: inline;
 }
 
-ul.menu {
-    list-style-type: none;
-    margin: 10px;
-    padding: 10px;
-    overflow: hidden;
-    background-color: rgb(4, 87, 17);
+.about-container {
+    color: #fff;
+    background-color: #5995DA;  /* Blue */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 400px;
 }
 
-.menu-item {
-    float: left;
-    border-right: 1px solid #bbb;
+.characteristics-container {
+    background-color: rgb(156, 197, 173);  
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
 }
 
-.menu-item:last-child {
-    border-right: none;
+.favorite-places-container {
+    background-color: rgb(212, 170, 157);  
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
 }
 
-.menu-item.active {
-    background-color: #4CAF50;
+.favorite-creatures-container {
+    background-color: rgb(168, 226, 223);  
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
 }
 
-a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px, 16px;
-    margin: 10px;
-    text-decoration: none;
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    .about-container{
+        order: -1;
+    }
+    .image {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        padding-left: 25px;
+    }
 }
 
-a:link {
-color: white;
-text-decoration: none;
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .favorite-places-container,
+    .favorite-creatures-container,
+    .characteristics-container {
+      width: 50%;
+    }
 }
-a:visited {
-color: white;
-}
-a:hover {
-color: aqua;
-text-decoration: underline;
-}
-a:active {
-color: red;
-}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    .page {
+      width: 960px;
+      margin: 0 auto;
+    }
+    .characteristics-container,
+    .favorite-places-container,
+    .favorite-creatures-container {
+      width: 33.3%;
+      height: 400px;
+    }
+  }
